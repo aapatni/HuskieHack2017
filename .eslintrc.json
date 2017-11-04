@@ -1,0 +1,93 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "commonjs": true
+  },
+  "globals": {
+    "_paq": true,
+    "Piwik": true
+  },
+  "extends": "eslint:recommended",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 8,
+    "impliedStrict": true
+  },
+  "plugins": [
+    "prefer-object-spread",
+    "html"
+  ],
+  "settings": {
+    "html/html-extensions": [".html", ".tag"]
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "vars-on-top": "error",
+    "max-nested-callbacks": ["error", 3],
+    "complexity": ["warn", 10],
+    "camelcase": ["error", {
+      "properties": "never"
+    }],
+    "dot-notation": "warn",
+    "func-style": ["error", "declaration", {
+      "allowArrowFunctions": true
+    }],
+    "func-call-spacing": ["error", "never"],
+    "prefer-const": "error",
+    "prefer-template": "warn",
+    "prefer-spread": "warn",
+    "prefer-arrow-callback": "error",
+    "prefer-promise-reject-errors": "error",
+    "prefer-object-spread/prefer-object-spread": "warn",
+    "object-shorthand": ["warn", "always"],
+    "no-multiple-empty-lines": ["error", {
+      "max": 1,
+      "maxEOF": 0
+    }],
+    "no-else-return": "error",
+    "no-implicit-coercion": "error",
+    "no-floating-decimal": "error",
+    "no-console": "off",
+    "no-var": "error",
+    "no-await-in-loop": "warn",
+    "no-trailing-spaces": "error",
+    "no-lonely-if": "error",
+    "no-undefined": "error",
+    "no-undef-init": "error",
+    "no-multi-assign": "error",
+    "no-unneeded-ternary": "error",
+    "no-nested-ternary": "error",
+    "no-void": "error",
+    "no-template-curly-in-string": "error",
+    "no-extra-parens": "error",
+    "strict": ["error", "safe"],
+    "require-jsdoc": ["warn", {
+      "require": {
+        "FunctionDeclaration": true,
+        "MethodDefinition": true,
+        "ClassDeclaration": true,
+        "ArrowFunctionExpression": true
+      }
+    }],
+    "valid-jsdoc": [
+      "error"
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ]
+  }
+}

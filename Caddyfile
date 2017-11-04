@@ -1,0 +1,42 @@
+* {
+  #tls off
+  tls self_signed
+  browse
+  root ./dist
+  gzip {
+    level 9
+  }
+  proxy /socket.io localhost:3000 {
+    websocket
+    transparent
+  }
+  proxy /couchdb localhost:5984 {
+    without /couchdb
+    transparent
+  }
+  status 400 /status/400
+  rewrite {
+    if {>Referer} not_has "http://pixsquare.tk:2015/"
+    if {path} not "/"
+    if {path} not "/socket.io/"
+    if {file} match "/\.(js|html|css|png|jpg|gif|svg|eot|ttf|woff|woff2|xml|ico|json)$/"
+    to /status/400
+  }
+  rewrite {
+    if {>Accept} is "application/json"
+    if {>Content-Type} is "application/json"
+    if_op or
+    to /couchdb/{uri}
+  }
+  rewrite {
+    if {path} not_has "/socket.io"
+    if {path} not_has "/couchdb"
+    to {path} /
+  }
+  log / stdout "{proto}, Request: {method} {file}, HTTPS interception: {mitm}"
+  header / {
+    X-XSS-Protection "1; mode=block"
+    X-Content-Type-Options "nosniff"
+    X-Frame-Options "DENY"
+  }
+}

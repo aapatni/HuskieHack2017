@@ -4,10 +4,6 @@
     "browser": true,
     "commonjs": true
   },
-  "globals": {
-    "_paq": true,
-    "Piwik": true
-  },
   "extends": "eslint:recommended",
   "parser": "babel-eslint",
   "parserOptions": {

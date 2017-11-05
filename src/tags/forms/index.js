@@ -1,0 +1,1 @@
+require('./newType.tag')

@@ -1,0 +1,5 @@
+require('./pages.tag')
+require('./createPage.tag')
+require('./editMenu.tag')
+require('./settings.tag')
+require('./files.tag')

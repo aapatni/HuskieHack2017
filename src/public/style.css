@@ -1,0 +1,40 @@
+html {
+  background-color: black;
+  color: lightgray;
+}
+
+.content b {
+  color: white;
+  font-weight: 900;
+}
+
+.content table tr:hover {
+  background-color: inherit;
+}
+
+.content h1, .content h2 .content h3, .content h4, .content h5, .content h6, table {
+  color: lightgrey;
+}
+
+.transparent {
+  opacity: 0.7;
+}
+
+.wide {
+  width: 100%;
+}
+
+.footer {
+  background-color: black;
+}
+
+.light-text {
+  color: lightgrey;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}

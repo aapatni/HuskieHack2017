@@ -1,0 +1,45 @@
+{
+  "name": "Disaster Planning",
+  "short_name": "Disaster Planning",
+  "icons": [{
+      "src": "{{cloudinary-loader?name=rain-2192523_h1428z,fetch_format=webp,width=36,height=36!}}",
+      "sizes": "36x36",
+      "type": "image/webp",
+      "density": "0.75"
+    },
+    {
+      "src": "{{cloudinary-loader?name=rain-2192523_h1428z,fetch_format=webp,width=48,height=48!}}",
+      "sizes": "48x48",
+      "type": "image/webp",
+      "density": "1.0"
+    },
+    {
+      "src": "{{cloudinary-loader?name=rain-2192523_h1428z,fetch_format=webp,width=72,height=72!}}",
+      "sizes": "72x72",
+      "type": "image/webp",
+      "density": "1.5"
+    },
+    {
+      "src": "{{cloudinary-loader?name=rain-2192523_h1428z,fetch_format=webp,width=96,height=96!}}",
+      "sizes": "96x96",
+      "type": "image/webp",
+      "density": "2.0"
+    },
+    {
+      "src": "{{cloudinary-loader?name=rain-2192523_h1428z,fetch_format=webp,width=144,height=144!}}",
+      "sizes": "144x144",
+      "type": "image/webp",
+      "density": "3.0"
+    },
+    {
+      "src": "{{cloudinary-loader?name=rain-2192523_h1428z,fetch_format=webp,width=192,height=192!}}",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "density": "4.0"
+    }
+  ],
+  "background_color": "#363636",
+  "theme_color": "#363636",
+  "display": "standalone",
+  "start_url": "/"
+}

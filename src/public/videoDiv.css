@@ -1,0 +1,67 @@
+/* Default hide the video on all devices */
+
+video {
+  display: none
+}
+
+/* Default display the image to replace the video on all devices */
+
+#videosubstitute {
+  display: block;
+  width: 100%;
+  height: 100%;
+  filter: blur(3px);
+}
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {
+  video {
+    display: block;
+    width: 100%;
+    filter: blur(7px);
+    z-index: -1;
+  }
+  #videosubstitute {
+    display: none;
+  }
+}
+
+#videoDiv {
+  width: 100%;
+  height: 360px;
+  position: relative;
+}
+
+#videoBlock {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#videoMessage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#videoMessage * {
+  padding: 0.4em;
+  margin: 0
+}
+
+.videoClick {
+  text-align: center
+}
+
+.videoClick a {
+  color: white;
+  background-color: rgba(241, 241, 241, 0.25);
+  font-size: 1.7em;
+  cursor: pointer;
+  cursor: hand
+}

@@ -1,7 +1,12 @@
 import riot from 'riot'
 import route from 'riot-route'
-import pouchdb from './pouchdb'
 import izitoast from 'izitoast'
+import runtime from 'serviceworker-webpack-plugin/lib/runtime'
+
+(async () => {if ('serviceWorker' in navigator) {
+  const registration = runtime.register()
+  console.log(await registration)
+}})()
 
 //third party css
 require('bulma/bulma.sass')
@@ -22,8 +27,6 @@ require('ContentTools/build/content-tools.min.css')
 
 //tag files
 require('./tags')
-
-const userdb = pouchdb('_users')
 
 const loginEvents = riot.observable({
   loginState: null

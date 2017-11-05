@@ -1,4 +1,5 @@
 /* eslint-env node */
+import ServiceWorkerWebpackPlugin from 'serviceworker-webpack-plugin'
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const webpack = require('webpack')
@@ -175,6 +176,9 @@ module.exports = {
       statsOptions: null,
       // Log level. Can be 'info', 'warn', 'error' or 'silent'.
       logLevel: 'info'
+    }),
+    new ServiceWorkerWebpackPlugin({
+      entry: path.join(__dirname, 'src/sw.js'),
     }),
     new Visualizer(),
     new DashboardPlugin()

@@ -4,7 +4,6 @@ require('./form')
 require('./forms')
 
 require('./layout')
-require('./auth')
 
 require('./pages')
 
